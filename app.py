@@ -1,12 +1,7 @@
-import spider
-import weibo
-import thread
-import time
-import random
-import json
-import logging
-import traceback
+import spider, weibo, thread, time, random, json, logging, traceback
 from settings import _REDIS, _PAGE_INDEX, _QUEUE
+
+logging.basicConfig(level=logging.INFO)
 
 
 def spider_task():

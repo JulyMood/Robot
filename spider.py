@@ -1,13 +1,7 @@
-# -*- coding: utf-8 -*-
-import os
-import re
-import urllib
-import urllib2
-import settings
-import time
-import json
-import logging
-import traceback
+import os, re, urllib, urllib2, time, json, logging, traceback, settings
+
+logging.basicConfig(level=logging.INFO)
+
 
 class spider:
     def __init__(self):
