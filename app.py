@@ -17,7 +17,7 @@ def spider_task():
 
 
 try:
-    thread.start_new_thread(spider_task)
+    thread.start_new_thread(spider_task, ())
     time.sleep(10)
     while True:
         data = _REDIS.rpop(_QUEUE)
