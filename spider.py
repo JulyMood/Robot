@@ -1,4 +1,4 @@
-import os, re, urllib, urllib2, time, json, logging, traceback, settings
+import os, re, urllib, urllib2, time, json, logging, traceback, settings, datetime
 
 logging.basicConfig(level=logging.INFO)
 
@@ -35,7 +35,7 @@ class spider:
         for item in items:
             suffix = item[1][item[1].rfind('.'):]
             suffix = suffix if suffix == '.gif' else '.png'
-            path_name = self.path + str(int(time.time())) + suffix
+            path_name = self.path + str(int(round(time.time() * 1000))) + suffix
             urllib.urlretrieve(item[1], path_name)
             result.update({item[0]: path_name})
         return result
